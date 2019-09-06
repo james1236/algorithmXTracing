@@ -32,7 +32,7 @@ Convert your Sudoku to a two dimensional array as described above. Replace line 
 <br>
 
 #### 2.
-Replace both X's on line 24 shown below with the number of "boxes" (alternatively, `number of sudoku columns / 2`).
+Replace both X's on line 24 shown below with the number of "boxes" (set to `[2,2]` for a 4x4 puzzle and `[3,3]` for a 9x9 puzzle).
 
 `solve(sudoku,[X,X]);` -> `solve(sudoku,[2,2]);`
 
