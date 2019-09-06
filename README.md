@@ -5,7 +5,7 @@ A JavaScript implementation of Donald Knuth's Algorithm X that traces the proces
 
 <br>
 
-### What is algorithm X?
+### What is Algorithm X?
 Algorithm X is a general purpose backtracking algorithm devised by Donald Knuth in his paper on Dancing Links - a method for efficiently implementing backtracking algorithms - as a use case for his dancing links method. Algorithm X solves NP decision problems; nondeterministic desicion problems solveable in polynomial time.
 https://arxiv.org/pdf/cs/0011047
 
