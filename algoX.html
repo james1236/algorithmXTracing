@@ -1,0 +1,587 @@
+<style>
+/* Monospace font to avoid character width issues when displaying matricies */
+/* Whitespace pre to allow multiple spaces to be displayed */
+
+html *
+{
+   font-family: Monospace;
+   white-space:pre;
+}
+</style>
+
+<script>
+//=====================================================
+//-------------------Setup Functions-------------------
+//=====================================================
+
+
+hideSteps = true;
+
+rawIncidenceMatrix = [];
+
+//My example
+/*sudoku = [
+	[3,0,0,0],
+	[0,0,1,3],
+	[0,0,2,0],
+	[0,2,0,4],
+];*/
+
+//Other example
+sudoku = [
+	[0,0,4,1],
+	[1,4,0,0],
+	[0,3,1,0],
+	[0,0,0,0],
+];
+
+sudoku = [
+	[3,0,0,0],
+	[0,0,1,3],
+	[0,0,2,0],
+	[0,2,0,4],
+];
+
+sudoku =  [[0, 3, 0, 0], [0, 0, 1, 0], [2, 0, 0, 0], [0, 0, 4, 0]];
+
+//9x9
+/*sudoku = [
+	[0,9,3,7,0,0,0,2,5],
+	[8,0,4,6,5,0,0,0,0],
+	[0,0,5,0,0,0,3,6,0],
+	[3,7,0,0,0,0,0,0,4],
+	[0,0,0,0,7,0,0,3,6],
+	[4,0,2,3,9,0,1,8,7],
+	[2,0,7,0,0,4,0,0,9],
+	[1,0,0,0,0,9,7,4,2],
+	[5,4,9,2,0,7,8,0,3],
+];*/
+
+solve(sudoku,[2,2]);
+
+function sudokuToIncidenceMatrix(sudoku,houseSize) {
+	incidenceMatrix = [["_"]];
+
+	//Constraint Headers
+	//Rows appear once
+	for (row = 0; row < sudoku.length; row++) {
+		for (digit = 1; digit < sudoku.length+1; digit++) {
+			incidenceMatrix[0].push("R"+(row+1)+":N"+(digit));
+		}
+	}
+	
+	//Column appear once
+	for (column = 0; column < sudoku[0].length; column++) {
+		for (digit = 1; digit < sudoku.length+1; digit++) {
+			incidenceMatrix[0].push("C"+(column+1)+":N"+(digit));
+		}
+	}
+	
+	//House appear once
+	totalHouses = (sudoku[0].length / houseSize[0]) * (sudoku.length / houseSize[1]);
+	for (house = 0; house < totalHouses; house++) {
+		for (digit = 1; digit < sudoku.length+1; digit++) {
+			incidenceMatrix[0].push("H"+(house+1)+":N"+(digit));
+		}
+	}
+	
+	//Unique constraint
+	for (column = 0; column < sudoku[0].length; column++) {
+		for (row = 0; row < sudoku.length; row++) {
+			incidenceMatrix[0].push("U:R"+(row+1)+":C"+(column+1));
+		}
+	}
+	
+	
+	//Choices
+	for (column = 0; column < sudoku[0].length; column++) {
+		for (row = 0; row < sudoku.length; row++) {
+			//Create one choice for fixed cells
+			fixedCell = false;
+			digit = 1;
+			if (sudoku[row][column] != 0) {
+				fixedCell = true;
+				digit = sudoku[row][column];
+			}
+
+			for (null; digit < sudoku.length + 1; digit++) {
+				incidenceMatrix.push(["R"+(row+1)+":C"+(column+1)+":N"+digit]);
+				
+				//Test conditions
+				//Rows appear once
+				for (testRow = 0; testRow < sudoku.length; testRow++) {
+					for (testDigit = 1; testDigit < sudoku.length+1; testDigit++) {
+						val = (row == testRow && digit == testDigit) ? 1 : 0;
+						incidenceMatrix[incidenceMatrix.length-1].push(val);
+					}
+				}
+				
+				//Columns appear once
+				for (testColumn = 0; testColumn < sudoku[0].length; testColumn++) {
+					for (testDigit = 1; testDigit < sudoku.length+1; testDigit++) {
+						val = (column == testColumn && digit == testDigit) ? 1 : 0;
+						incidenceMatrix[incidenceMatrix.length-1].push(val);
+					}
+				}
+				
+				//Houses appear once
+				for (houseY = 0; houseY < sudoku.length; houseY+=houseSize[1]) {
+					for (houseX = 0; houseX < sudoku[0].length; houseX+=houseSize[0]) {
+						for (testDigit = 1; testDigit < sudoku.length+1; testDigit++) {
+							if (column < houseX+houseSize[0] && row < houseY+houseSize[1] && column >= houseX && row >= houseY && digit == testDigit) {
+								incidenceMatrix[incidenceMatrix.length-1].push(1);
+							} else {
+								incidenceMatrix[incidenceMatrix.length-1].push(0);
+							}
+						}
+					}
+				}
+				
+				//Unique constraints
+				for (testRow = 0; testRow < sudoku.length; testRow++) {
+					for (testColumn = 0; testColumn < sudoku[0].length; testColumn++) {
+						val = (column == testColumn && row == testRow) ? 1 : 0;
+						incidenceMatrix[incidenceMatrix.length-1].push(val);
+					}
+				}
+				
+				if (fixedCell) {
+					break;
+				}
+			}
+		}
+	}
+	
+	return incidenceMatrix;
+}
+
+function exactCoverToSudoku(exactCover) {
+	//Creating a copy of the sudoku board to fill with it's solution
+	solvedSudoku = sudoku;
+	
+	//Convert exact cover into an array of cell positions and respective values
+	exactCover.splice(0,1);
+	for (i = 0; i < exactCover.length; i++) {
+		while (exactCover[i].length > 1) {
+			exactCover[i].pop();
+		}
+	}
+	exactCover = exactCover.join().split(",");
+	for (exactCoverIndex = 0; exactCoverIndex < exactCover.length; exactCoverIndex++) {
+		parts = exactCover[exactCoverIndex].split(":");
+		partLetters = ["R","C","N"];
+		for (partIndex = 0; partIndex < parts.length; partIndex++) {
+			while (parts[partIndex].indexOf(partLetters[partIndex]) != -1) {
+				parts[partIndex] = parts[partIndex].replace(partLetters[partIndex],"");
+			}
+			parts[partIndex] = parseInt(parts[partIndex]);
+		}
+
+		//Convert array of positions and values into a sudoku 2d array
+		solvedSudoku[parts[0]-1][parts[1]-1] = parts[2];
+	}
+	return solvedSudoku;
+} 
+
+function solve(matrix,houseSize) {
+	if (houseSize != undefined) {
+		displayMatrix(matrix,"Sudoku Board");
+	}
+	
+
+	//Instantiating Variables
+	solution = [];
+	pass = 0;
+
+	if (houseSize == undefined) {
+		//Creating headers for the incidence matrix
+		matrix = addGenericHeaders(matrix);
+	} else {
+		matrix = sudokuToIncidenceMatrix(matrix,houseSize);
+		rawIncidenceMatrix = matrix;
+	}
+	
+	//Aligning headers for monospace font
+	matrix = alignHeaders(matrix);
+	
+	//Copying the column headers of the matrix to the solution matrix
+	solution[0] = matrix[0];
+
+	//Display Incidence Matrix
+	displayPass(pass);
+	displayMatrix(matrix,"Matrix A");
+
+	//Begin algorithm X
+	if (algorithmX(JSON.parse(JSON.stringify(matrix)))) {
+		if (houseSize != undefined) {
+			//Convert exact cover back to sudoku and display it
+			displayMatrix(exactCoverToSudoku(solution),"Sudoku Board");
+		}
+	} else {
+		//Failure Message
+		displayUnsuccessfulTermination();
+	}
+}
+
+//=====================================================
+//---------------------Algorithm X---------------------
+//=====================================================
+
+function algorithmX(A) {
+	//Increment Pass Number
+	displayPass(++pass);
+	
+	//Successful termination if matrix is empty
+	//    rows             columns
+	if (A.length <= 1 || A[0].length <= 1) {
+		displaySuccessfulTermination();
+		return true;
+	}
+	
+	//CHOOSE A COLUMN
+	//Find the least number of ones in any column
+	leastOnes = A.length;
+	for (column = 1; column < A[0].length; column++) {
+		columnTotal = 0;
+		for (row = 1; row < A.length; row++) {
+			columnTotal+=A[row][column];
+		}
+		if (columnTotal < leastOnes) {
+			leastOnes = columnTotal;
+		}
+	}
+	
+	//Choose first column with least ones
+	for (c = 1; c < A[0].length; c++) {
+		columnTotal = 0;
+		for (row = 1; row < A.length; row++) {
+			columnTotal+=A[row][c];
+		}
+		if (columnTotal == leastOnes) {
+			break;
+		}
+	}
+	
+	displayLeastOnes(leastOnes);
+	if (leastOnes == 0) {
+		//Branch End: A column with no ones cannot appear in exact cover
+		displayBranchEnd(A[0][c]);
+		return false;
+	}
+	
+	displayColumnSelection(A[0][c]);
+	//Choosing random column should work but dosen't for some reason
+	//c = Math.floor(Math.random() * A[0].length-1)+1;  
+	//displayColumnSelection(A[0][c]);
+	
+	//CHOOSE A ROW
+	//Select all rows where a one appears in the selected column
+	rows = [];
+	for (row = 1; row < A.length; row++) {
+		if (A[row][c]) {
+			rows.push(row);
+		}
+	}
+	
+	rowLetters = rowNumbersToLetters(A,rows);
+	displayRowSelections(rowLetters);
+
+	//For every row selected
+	for (ri = 0; ri < rows.length; ri++) {
+		r = rows[ri];
+		displayRowSelection(A[r][0],rowLetters);
+		
+		//Save current state for backtracking
+		ABackup = JSON.stringify(A);
+		solutionBackup = JSON.stringify(solution);
+		
+		//INCLUDE R IN PARTIAL SOLUTION
+		//reverse lookup original index for row header
+		for (rl = 1; rl < rawIncidenceMatrix.length; rl++) {
+			if (rawIncidenceMatrix[rl][0] == A[r][0]) {
+				solution.push(rawIncidenceMatrix[rl]);
+				break;
+			}
+		}
+		
+		displayMatrix(A,"Matrix A");
+		displayMatrix(solution,"Partial Solution");
+		
+		//Deleting all columns where a 1 appears in the chosen row, deleting all rows where a 1 appears in the deleted column
+		columnDeletions = [];
+		rowDeletions = [];
+		
+		for (j = 1; j < A[0].length; j++) {
+			if (A[r][j]) {
+				addColumnDeletion(j);
+				for (i = 1; i < A.length; i++) {
+					if (A[i][j]) {
+						addRowDeletion(i);
+					}
+				}
+			}
+		}
+		
+		//Sorting deletion queues
+		columnDeletions.sort(function(a,b) { return a - b; });
+		rowDeletions.sort(function(a,b) { return a - b; });
+
+		while (columnDeletions.length) {
+			//Delete column
+			displayDeletedColumn(A[0][columnDeletions[0]]);
+			
+			for (rowte = 0; rowte < A.length; rowte++) {
+				A[rowte].splice(columnDeletions[0], 1);
+			}
+			columnDeletions.splice(0, 1);
+			
+			//Decrement following row numbers after deletion
+			for (cdeld = 0; cdeld < columnDeletions.length; cdeld++) {
+				columnDeletions[cdeld]--;
+			}
+		}
+		
+		while (rowDeletions.length) {
+			//Delete row
+			displayDeletedRow(A[rowDeletions[0]][0]);
+			A.splice(rowDeletions[0], 1);
+			rowDeletions.splice(0, 1);
+			
+			//Decrement following row numbers after deletion
+			for (rdeld = 0; rdeld < rowDeletions.length; rdeld++) {
+				rowDeletions[rdeld]--;
+			}
+		}
+		
+		displayMatrix(A,"Matrix A");
+		
+		//Recursion
+		if (algorithmX(A)) {
+			return true;
+		} else {
+			//Restore Previous State
+			A = JSON.parse(ABackup);
+			solution = JSON.parse(solutionBackup);
+		}
+	}
+}
+
+
+function addColumnDeletion(val) {
+	//Don't add column to deletion queue if it is already present
+	if (columnDeletions.indexOf(val) == -1) {
+		columnDeletions.push(val);
+	}
+}
+function addRowDeletion(val) {
+	//Don't add row to deletion queue if it is already present
+	if (rowDeletions.indexOf(val) == -1) {
+		rowDeletions.push(val);
+	}
+}
+
+//=====================================================
+//-----------------Execute Algorithm X-----------------
+//=====================================================
+
+//Solving just an incidence matrix
+rawIncidenceMatrix = [[1,0,0,1,0,0],
+[1,0,1,0,1,1],
+[0,1,1,0,0,1],
+[1,1,0,0,1,0],
+[0,1,1,0,0,1],
+[0,0,0,1,0,1],
+[0,0,1,0,0,0]];
+
+
+//solve(rawIncidenceMatrix);
+
+//=====================================================
+//------------------Display Functions------------------
+//=====================================================
+
+function alignHeaders(matrix) {
+	//Even out header names to improve monospace visualization
+	longestColumnName = 0;
+	longestRowName = 0;
+	
+	//Find out row header max length
+	for (i = 1; i < matrix.length; i++) {
+		if ((matrix[i][0]+"").length > longestRowName) {
+			longestRowName = (matrix[i][0]+"").length;
+		}
+	}
+	//Find out column header max length
+	for (i = 1; i < matrix[0].length; i++) {
+		if ((matrix[0][i]+"").length > longestColumnName) {
+			longestColumnName = (matrix[0][i]+"").length;
+		}
+	}
+	//Add spaces to row headers to even out
+	for (i = 0; i < matrix.length; i++) {
+		while((matrix[i][0]+"").length != longestRowName) {
+			matrix[i][0]+=" ";
+		}
+	}
+	//Add spaces to column headers to even out
+	for (i = 1; i < matrix[0].length; i++) {
+		while((matrix[0][i]+"").length != longestColumnName) {
+			matrix[0][i]+=" ";
+		}
+	}
+	
+	return matrix;
+}
+
+function addGenericHeaders(matrix) {
+	//Add row and column headers to incidence matrix
+	matrix.unshift([]);
+	for (i = 0; i < matrix[1].length; i++) {
+		matrix[0].push(i+1);
+	}
+	for (row = 0; row < matrix.length; row++) {
+		if (row == 0) {
+			matrix[row].unshift("_");
+		} else {
+			matrix[row].unshift(excelNumbering(row));
+		}
+	}
+	
+	return matrix;
+}
+
+//Adapted from: https://codereview.stackexchange.com/questions/72285/excel-like-column-numbering
+function excelNumbering(nNum) {
+	result = "";
+	if (nNum > 702) {
+		result+= "-".repeat(Math.trunc(nNum/702));
+		nNum-=Math.trunc(nNum/702)*702-1;
+	}
+
+    if (nNum <= 26) {
+        result+= letter(nNum);
+    } else {
+        modulo = nNum % 26;
+        quotient = Math.floor(nNum / 26);
+        if (modulo === 0) {
+            result+= letter(quotient - 1) + letter(26);
+        } else {
+            result+= letter(quotient) + letter(modulo);
+        }
+    }
+
+    return result;
+}
+
+function letter(nNum) {
+    var a = "A".charCodeAt(0);
+    return String.fromCharCode(a + nNum - 1);
+}
+
+function displayPass(pass) {
+	document.write("Pass: "+pass+"<br>");
+}
+
+function displaySuccessfulTermination() {
+	document.write("&nbsp;&nbsp;&nbsp;Successful Termination<br>");
+	displayMatrix(solution,"Exact Cover");
+}
+
+function displayUnsuccessfulTermination() {
+	document.write("&nbsp;&nbsp;&nbsp;Unsuccessful Termination (Solution not found)<br>");
+}
+
+function displayBranchEnd(column) {
+	document.write("&nbsp;&nbsp;&nbsp;Column "+ column +" has no 1s, LAST STATE RESTORED<br><br>");
+}
+
+function displayLeastOnes(leastOnes) {
+	document.write("&nbsp;&nbsp;&nbsp;Least number of 1s in all columns: "+leastOnes+"<br>");
+}
+
+function displayColumnSelection(columnName) {
+	document.write("&nbsp;&nbsp;&nbsp;Selected column: "+columnName+"<br>");
+}
+
+function displayRowSelections(rowLetters) {
+	document.write("&nbsp;&nbsp;&nbsp;Selected rows: "+JSON.stringify(rowLetters).split('"').join("")+" (Intersection of these rows and the chosen column is a 1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---<br>");
+}
+
+function displayDeletedColumn(column) {
+	document.write("&nbsp;&nbsp;&nbsp;Deleted column: "+column+"<br>");
+}		
+
+function displayDeletedRow(row) {
+	document.write("&nbsp;&nbsp;&nbsp;Deleted row: "+row+"<br>");
+}
+
+function rowNumbersToLetters(matrix,rows) {
+	//Row lettering
+	rowLetters = [];
+	for (i = 0; i < rows.length; i++) {
+		rowLetters.push(matrix[rows[i]][0]);
+	}
+	return rowLetters;
+}
+
+function displayRowSelection(row, rowLetters) {
+	document.write("&nbsp;&nbsp;&nbsp;Row "+row+" from "+JSON.stringify(rowLetters).split('"').join("")+" (Added to Partial Solution from Incidence Matrix)<br><br>");
+}
+
+function displayMatrix(matrix,type) {
+	if (type != "Sudoku Board" && hideSteps) {return}
+
+	tempMatrix = JSON.parse(JSON.stringify(matrix));
+	
+	//Matrix is empty
+	if (tempMatrix.length <= 1) {
+		document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+type+": Empty<br><br>");
+		return;
+	}
+	
+	if (type != "Sudoku Board") {
+		//Format matrix for display
+		columnNamesTemp = tempMatrix[0];
+		tempMatrix.splice(0, 1);
+		
+		spaceString = "";
+		for (i = 1; i < longestColumnName; i++) {
+			spaceString+=" ";
+		}
+		text = JSON.stringify(tempMatrix);
+		
+		//Excludes rows from the space addition
+		rowRemoval = text.split("[");
+		for (row = 0; row < rowRemoval.length; row++) {
+			commas = rowRemoval[row].split(",");
+			if (commas.length > 1) {
+				commas2 = JSON.parse(JSON.stringify(commas));
+				commas2.splice(0, 1);
+				rowRemoval[row] = commas2.join(",");
+				rowRemoval[row] = rowRemoval[row].split("0").join("0"+spaceString);
+				rowRemoval[row] = rowRemoval[row].split("1").join("1"+spaceString);
+				rowRemoval[row] = commas[0] + "," + rowRemoval[row];
+			}
+		}
+		text = rowRemoval.join("[");
+	
+	
+		text = text.substring(1);
+		text = text.substring(0,text.length-1);
+		text = JSON.stringify(columnNamesTemp).substring(0,text.length-1)+"<br>" + text;
+	} else {
+		//Format sudoku board for display
+		text = JSON.stringify(matrix);
+		text = text.substring(1);
+		text = text.substring(0,text.length-1);
+	}
+	
+	
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+type+":<br>");
+	
+	text = text.split("],").join("]<br>").split("[").join("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[").split('"').join("")+"<br>";
+
+	document.write(text+"<br>");
+}
+
+</script>
