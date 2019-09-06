@@ -32,7 +32,7 @@ Convert your Sudoku to a two dimensional array as described above. Replace line 
 <br>
 
 #### 2.
-Replace both X's on line 24 shown below with the number of "boxes" (alternatively, `number of sudoku columns / 2`)
+Replace both X's on line 24 shown below with the number of "boxes" (alternatively, `number of sudoku columns / 2`).
 
 `solve(sudoku,[X,X]);` -> `solve(sudoku,[2,2]);`
 
@@ -40,5 +40,11 @@ Replace both X's on line 24 shown below with the number of "boxes" (alternativel
 
 
 #### 3.
-Save your HTML file and double click it to run
+Save your HTML file and double click it to run.
 
+<br>
+
+### Output Examples & Simplification
+Examples of the program's outputs for 4x4 and 9x9 Sudoku puzzles can be found in the `outputExamples` folder. Simplified versions of the outputs (where tables are not drawn during tracing) are provided which reduce the file size significantly. 
+
+To generate these simplified versions (strongly reccomended for 9x9 puzzles), set `hideSteps = true;` on line 18
