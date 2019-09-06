@@ -1,0 +1,1316 @@
+         Sudoku Board:
+         [0,9,3,7,0,0,0,2,5]
+         [8,0,4,6,5,0,0,0,0]
+         [0,0,5,0,0,0,3,6,0]
+         [3,7,0,0,0,0,0,0,4]
+         [0,0,0,0,7,0,0,3,6]
+         [4,0,2,3,9,0,1,8,7]
+         [2,0,7,0,0,4,0,0,9]
+         [1,0,0,0,0,9,7,4,2]
+         [5,4,9,2,0,7,8,0,3]
+
+Pass: 0
+Pass: 1
+   Least number of 1s in all columns: 1
+   Selected column: U:R2:C1
+   Selected rows: [R1:C2:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C2:N9 from [R1:C2:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N9  
+   Deleted column: C2:N9  
+   Deleted column: H1:N9  
+   Deleted column: U:R2:C1
+   Deleted row: R1:C1:N9
+   Deleted row: R3:C1:N9
+   Deleted row: R1:C2:N9
+   Deleted row: R2:C2:N9
+   Deleted row: R3:C2:N9
+   Deleted row: R5:C2:N9
+   Deleted row: R6:C2:N9
+   Deleted row: R7:C2:N9
+   Deleted row: R8:C2:N9
+   Deleted row: R1:C5:N9
+   Deleted row: R1:C6:N9
+   Deleted row: R1:C7:N9
+Pass: 2
+   Least number of 1s in all columns: 1
+   Selected column: C1:N9  
+   Selected rows: [R5:C1:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C1:N9 from [R5:C1:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N9  
+   Deleted column: C1:N9  
+   Deleted column: H4:N9  
+   Deleted column: U:R1:C5
+   Deleted row: R5:C1:N1
+   Deleted row: R5:C1:N2
+   Deleted row: R5:C1:N3
+   Deleted row: R5:C1:N4
+   Deleted row: R5:C1:N5
+   Deleted row: R5:C1:N6
+   Deleted row: R5:C1:N7
+   Deleted row: R5:C1:N8
+   Deleted row: R5:C1:N9
+   Deleted row: R4:C3:N9
+   Deleted row: R5:C3:N9
+   Deleted row: R5:C4:N9
+   Deleted row: R5:C6:N9
+   Deleted row: R5:C7:N9
+Pass: 3
+   Least number of 1s in all columns: 1
+   Selected column: U:R3:C1
+   Selected rows: [R1:C3:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C3:N3 from [R1:C3:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N3  
+   Deleted column: C3:N3  
+   Deleted column: H1:N3  
+   Deleted column: U:R3:C1
+   Deleted row: R1:C1:N3
+   Deleted row: R3:C1:N3
+   Deleted row: R2:C2:N3
+   Deleted row: R3:C2:N3
+   Deleted row: R1:C3:N3
+   Deleted row: R4:C3:N3
+   Deleted row: R5:C3:N3
+   Deleted row: R8:C3:N3
+   Deleted row: R1:C5:N3
+   Deleted row: R1:C6:N3
+   Deleted row: R1:C7:N3
+Pass: 4
+   Least number of 1s in all columns: 1
+   Selected column: C1:N3  
+   Selected rows: [R4:C1:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C1:N3 from [R4:C1:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N3  
+   Deleted column: C1:N3  
+   Deleted column: H4:N3  
+   Deleted column: U:R1:C4
+   Deleted row: R4:C1:N3
+   Deleted row: R5:C2:N3
+   Deleted row: R6:C2:N3
+   Deleted row: R4:C4:N3
+   Deleted row: R4:C5:N3
+   Deleted row: R4:C6:N3
+   Deleted row: R4:C7:N3
+   Deleted row: R4:C8:N3
+Pass: 5
+   Least number of 1s in all columns: 1
+   Selected column: U:R4:C1
+   Selected rows: [R1:C4:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C4:N7 from [R1:C4:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N7  
+   Deleted column: C4:N7  
+   Deleted column: H2:N7  
+   Deleted column: U:R4:C1
+   Deleted row: R1:C1:N7
+   Deleted row: R1:C4:N7
+   Deleted row: R3:C4:N7
+   Deleted row: R4:C4:N7
+   Deleted row: R5:C4:N7
+   Deleted row: R7:C4:N7
+   Deleted row: R8:C4:N7
+   Deleted row: R1:C5:N7
+   Deleted row: R3:C5:N7
+   Deleted row: R1:C6:N7
+   Deleted row: R2:C6:N7
+   Deleted row: R3:C6:N7
+   Deleted row: R1:C7:N7
+Pass: 6
+   Least number of 1s in all columns: 1
+   Selected column: C1:N7  
+   Selected rows: [R3:C1:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C1:N7 from [R3:C1:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N7  
+   Deleted column: C1:N7  
+   Deleted column: H1:N7  
+   Deleted column: U:R1:C3
+   Deleted row: R3:C1:N1
+   Deleted row: R3:C1:N2
+   Deleted row: R3:C1:N4
+   Deleted row: R3:C1:N5
+   Deleted row: R3:C1:N6
+   Deleted row: R3:C1:N7
+   Deleted row: R3:C1:N8
+   Deleted row: R2:C2:N7
+   Deleted row: R3:C2:N7
+   Deleted row: R3:C9:N7
+Pass: 7
+   Least number of 1s in all columns: 1
+   Selected column: C1:N6  
+   Selected rows: [R1:C1:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C1:N6 from [R1:C1:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N6  
+   Deleted column: C1:N6  
+   Deleted column: H1:N6  
+   Deleted column: U:R1:C1
+   Deleted row: R1:C1:N1
+   Deleted row: R1:C1:N2
+   Deleted row: R1:C1:N4
+   Deleted row: R1:C1:N5
+   Deleted row: R1:C1:N6
+   Deleted row: R1:C1:N8
+   Deleted row: R2:C2:N6
+   Deleted row: R3:C2:N6
+   Deleted row: R1:C5:N6
+   Deleted row: R1:C6:N6
+   Deleted row: R1:C7:N6
+Pass: 8
+   Least number of 1s in all columns: 1
+   Selected column: C1:N1  
+   Selected rows: [R8:C1:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C1:N1 from [R8:C1:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N1  
+   Deleted column: C1:N1  
+   Deleted column: H7:N1  
+   Deleted column: U:R1:C8
+   Deleted row: R8:C1:N1
+   Deleted row: R7:C2:N1
+   Deleted row: R8:C2:N1
+   Deleted row: R8:C3:N1
+   Deleted row: R8:C4:N1
+   Deleted row: R8:C5:N1
+Pass: 9
+   Least number of 1s in all columns: 1
+   Selected column: C1:N2  
+   Selected rows: [R7:C1:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C1:N2 from [R7:C1:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N2  
+   Deleted column: C1:N2  
+   Deleted column: H7:N2  
+   Deleted column: U:R1:C7
+   Deleted row: R7:C1:N2
+   Deleted row: R7:C2:N2
+   Deleted row: R8:C2:N2
+   Deleted row: R8:C3:N2
+   Deleted row: R7:C4:N2
+   Deleted row: R7:C5:N2
+   Deleted row: R7:C7:N2
+   Deleted row: R7:C8:N2
+Pass: 10
+   Least number of 1s in all columns: 1
+   Selected column: C1:N4  
+   Selected rows: [R6:C1:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C1:N4 from [R6:C1:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N4  
+   Deleted column: C1:N4  
+   Deleted column: H4:N4  
+   Deleted column: U:R1:C6
+   Deleted row: R6:C1:N4
+   Deleted row: R5:C2:N4
+   Deleted row: R6:C2:N4
+   Deleted row: R4:C3:N4
+   Deleted row: R5:C3:N4
+   Deleted row: R6:C6:N4
+Pass: 11
+   Least number of 1s in all columns: 1
+   Selected column: C1:N5  
+   Selected rows: [R9:C1:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C1:N5 from [R9:C1:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N5  
+   Deleted column: C1:N5  
+   Deleted column: H7:N5  
+   Deleted column: U:R1:C9
+   Deleted row: R9:C1:N5
+   Deleted row: R7:C2:N5
+   Deleted row: R8:C2:N5
+   Deleted row: R8:C3:N5
+   Deleted row: R9:C5:N5
+   Deleted row: R9:C8:N5
+Pass: 12
+   Least number of 1s in all columns: 1
+   Selected column: C1:N8  
+   Selected rows: [R2:C1:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C1:N8 from [R2:C1:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N8  
+   Deleted column: C1:N8  
+   Deleted column: H1:N8  
+   Deleted column: U:R1:C2
+   Deleted row: R2:C1:N8
+   Deleted row: R2:C2:N8
+   Deleted row: R3:C2:N8
+   Deleted row: R2:C6:N8
+   Deleted row: R2:C7:N8
+   Deleted row: R2:C8:N8
+   Deleted row: R2:C9:N8
+Pass: 13
+   Least number of 1s in all columns: 1
+   Selected column: C9:N8  
+   Selected rows: [R3:C9:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C9:N8 from [R3:C9:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N8  
+   Deleted column: C9:N8  
+   Deleted column: H3:N8  
+   Deleted column: U:R9:C3
+   Deleted row: R3:C4:N8
+   Deleted row: R3:C5:N8
+   Deleted row: R3:C6:N8
+   Deleted row: R1:C7:N8
+   Deleted row: R3:C9:N1
+   Deleted row: R3:C9:N2
+   Deleted row: R3:C9:N3
+   Deleted row: R3:C9:N4
+   Deleted row: R3:C9:N5
+   Deleted row: R3:C9:N6
+   Deleted row: R3:C9:N8
+   Deleted row: R3:C9:N9
+Pass: 14
+   Least number of 1s in all columns: 1
+   Selected column: C9:N1  
+   Selected rows: [R2:C9:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C9:N1 from [R2:C9:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N1  
+   Deleted column: C9:N1  
+   Deleted column: H3:N1  
+   Deleted column: U:R9:C2
+   Deleted row: R2:C2:N1
+   Deleted row: R2:C6:N1
+   Deleted row: R1:C7:N1
+   Deleted row: R2:C7:N1
+   Deleted row: R2:C8:N1
+   Deleted row: R2:C9:N1
+   Deleted row: R2:C9:N2
+   Deleted row: R2:C9:N3
+   Deleted row: R2:C9:N4
+   Deleted row: R2:C9:N5
+   Deleted row: R2:C9:N6
+   Deleted row: R2:C9:N7
+   Deleted row: R2:C9:N9
+Pass: 15
+   Least number of 1s in all columns: 1
+   Selected column: C9:N2  
+   Selected rows: [R8:C9:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C9:N2 from [R8:C9:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N2  
+   Deleted column: C9:N2  
+   Deleted column: H9:N2  
+   Deleted column: U:R9:C8
+   Deleted row: R8:C4:N2
+   Deleted row: R8:C5:N2
+   Deleted row: R9:C8:N2
+   Deleted row: R8:C9:N2
+Pass: 16
+   Least number of 1s in all columns: 1
+   Selected column: C9:N3  
+   Selected rows: [R9:C9:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C9:N3 from [R9:C9:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N3  
+   Deleted column: C9:N3  
+   Deleted column: H9:N3  
+   Deleted column: U:R9:C9
+   Deleted row: R9:C5:N3
+   Deleted row: R7:C7:N3
+   Deleted row: R7:C8:N3
+   Deleted row: R9:C8:N3
+   Deleted row: R9:C9:N3
+Pass: 17
+   Least number of 1s in all columns: 1
+   Selected column: C9:N4  
+   Selected rows: [R4:C9:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C9:N4 from [R4:C9:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N4  
+   Deleted column: C9:N4  
+   Deleted column: H6:N4  
+   Deleted column: U:R9:C4
+   Deleted row: R4:C4:N4
+   Deleted row: R4:C5:N4
+   Deleted row: R4:C6:N4
+   Deleted row: R4:C7:N4
+   Deleted row: R5:C7:N4
+   Deleted row: R4:C8:N4
+   Deleted row: R4:C9:N4
+Pass: 18
+   Least number of 1s in all columns: 1
+   Selected column: C9:N5  
+   Selected rows: [R1:C9:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C9:N5 from [R1:C9:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N5  
+   Deleted column: C9:N5  
+   Deleted column: H3:N5  
+   Deleted column: U:R9:C1
+   Deleted row: R1:C5:N5
+   Deleted row: R1:C6:N5
+   Deleted row: R1:C7:N5
+   Deleted row: R2:C7:N5
+   Deleted row: R2:C8:N5
+   Deleted row: R1:C9:N5
+Pass: 19
+   Least number of 1s in all columns: 1
+   Selected column: C9:N6  
+   Selected rows: [R5:C9:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C9:N6 from [R5:C9:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N6  
+   Deleted column: C9:N6  
+   Deleted column: H6:N6  
+   Deleted column: U:R9:C5
+   Deleted row: R5:C2:N6
+   Deleted row: R5:C3:N6
+   Deleted row: R5:C4:N6
+   Deleted row: R5:C6:N6
+   Deleted row: R4:C7:N6
+   Deleted row: R5:C7:N6
+   Deleted row: R4:C8:N6
+   Deleted row: R5:C9:N6
+Pass: 20
+   Least number of 1s in all columns: 1
+   Selected column: C9:N7  
+   Selected rows: [R6:C9:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C9:N7 from [R6:C9:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N7  
+   Deleted column: C9:N7  
+   Deleted column: H6:N7  
+   Deleted column: U:R9:C6
+   Deleted row: R6:C2:N7
+   Deleted row: R6:C6:N7
+   Deleted row: R4:C7:N7
+   Deleted row: R5:C7:N7
+   Deleted row: R4:C8:N7
+   Deleted row: R6:C9:N7
+Pass: 21
+   Least number of 1s in all columns: 1
+   Selected column: C9:N9  
+   Selected rows: [R7:C9:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C9:N9 from [R7:C9:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N9  
+   Deleted column: C9:N9  
+   Deleted column: H9:N9  
+   Deleted column: U:R9:C7
+   Deleted row: R7:C4:N9
+   Deleted row: R7:C5:N9
+   Deleted row: R7:C7:N9
+   Deleted row: R7:C8:N9
+   Deleted row: R9:C8:N9
+   Deleted row: R7:C9:N9
+Pass: 22
+   Least number of 1s in all columns: 1
+   Selected column: H1:N1  
+   Selected rows: [R3:C2:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C2:N1 from [R3:C2:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N1  
+   Deleted column: C2:N1  
+   Deleted column: H1:N1  
+   Deleted column: U:R2:C3
+   Deleted row: R3:C2:N1
+   Deleted row: R3:C2:N2
+   Deleted row: R3:C2:N4
+   Deleted row: R3:C2:N5
+   Deleted row: R5:C2:N1
+   Deleted row: R6:C2:N1
+   Deleted row: R3:C4:N1
+   Deleted row: R3:C5:N1
+   Deleted row: R3:C6:N1
+Pass: 23
+   Least number of 1s in all columns: 1
+   Selected column: H1:N2  
+   Selected rows: [R2:C2:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C2:N2 from [R2:C2:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N2  
+   Deleted column: C2:N2  
+   Deleted column: H1:N2  
+   Deleted column: U:R2:C2
+   Deleted row: R2:C2:N2
+   Deleted row: R2:C2:N4
+   Deleted row: R2:C2:N5
+   Deleted row: R5:C2:N2
+   Deleted row: R6:C2:N2
+   Deleted row: R2:C6:N2
+   Deleted row: R2:C7:N2
+   Deleted row: R2:C8:N2
+Pass: 24
+   Least number of 1s in all columns: 1
+   Selected column: H1:N4  
+   Selected rows: [R2:C3:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C3:N4 from [R2:C3:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N4  
+   Deleted column: C3:N4  
+   Deleted column: H1:N4  
+   Deleted column: U:R3:C2
+   Deleted row: R2:C3:N4
+   Deleted row: R8:C3:N4
+   Deleted row: R2:C6:N4
+   Deleted row: R2:C7:N4
+   Deleted row: R2:C8:N4
+Pass: 25
+   Least number of 1s in all columns: 1
+   Selected column: H1:N5  
+   Selected rows: [R3:C3:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C3:N5 from [R3:C3:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N5  
+   Deleted column: C3:N5  
+   Deleted column: H1:N5  
+   Deleted column: U:R3:C3
+   Deleted row: R3:C3:N5
+   Deleted row: R4:C3:N5
+   Deleted row: R5:C3:N5
+   Deleted row: R3:C4:N5
+   Deleted row: R3:C5:N5
+   Deleted row: R3:C6:N5
+Pass: 26
+   Least number of 1s in all columns: 1
+   Selected column: H3:N4  
+   Selected rows: [R1:C7:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C7:N4 from [R1:C7:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N4  
+   Deleted column: C7:N4  
+   Deleted column: H3:N4  
+   Deleted column: U:R7:C1
+   Deleted row: R1:C5:N4
+   Deleted row: R1:C6:N4
+   Deleted row: R1:C7:N2
+   Deleted row: R1:C7:N4
+   Deleted row: R7:C7:N4
+Pass: 27
+   Least number of 1s in all columns: 1
+   Selected column: H3:N2  
+   Selected rows: [R1:C8:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C8:N2 from [R1:C8:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N2  
+   Deleted column: C8:N2  
+   Deleted column: H3:N2  
+   Deleted column: U:R8:C1
+   Deleted row: R1:C5:N2
+   Deleted row: R1:C6:N2
+   Deleted row: R1:C8:N2
+   Deleted row: R4:C8:N2
+Pass: 28
+   Least number of 1s in all columns: 1
+   Selected column: U:R4:C2
+   Selected rows: [R2:C4:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C4:N6 from [R2:C4:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N6  
+   Deleted column: C4:N6  
+   Deleted column: H2:N6  
+   Deleted column: U:R4:C2
+   Deleted row: R2:C4:N6
+   Deleted row: R3:C4:N6
+   Deleted row: R4:C4:N6
+   Deleted row: R7:C4:N6
+   Deleted row: R8:C4:N6
+   Deleted row: R3:C5:N6
+   Deleted row: R2:C6:N6
+   Deleted row: R3:C6:N6
+   Deleted row: R2:C7:N6
+   Deleted row: R2:C8:N6
+Pass: 29
+   Least number of 1s in all columns: 1
+   Selected column: R3:N6  
+   Selected rows: [R3:C8:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C8:N6 from [R3:C8:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N6  
+   Deleted column: C8:N6  
+   Deleted column: H3:N6  
+   Deleted column: U:R8:C3
+   Deleted row: R3:C8:N6
+   Deleted row: R7:C8:N6
+   Deleted row: R9:C8:N6
+Pass: 30
+   Least number of 1s in all columns: 1
+   Selected column: R9:N6  
+   Selected rows: [R9:C5:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C5:N6 from [R9:C5:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N6  
+   Deleted column: C5:N6  
+   Deleted column: H8:N6  
+   Deleted column: U:R5:C9
+   Deleted row: R4:C5:N6
+   Deleted row: R7:C5:N6
+   Deleted row: R8:C5:N6
+   Deleted row: R9:C5:N1
+   Deleted row: R9:C5:N2
+   Deleted row: R9:C5:N4
+   Deleted row: R9:C5:N6
+   Deleted row: R9:C5:N7
+   Deleted row: R9:C5:N8
+   Deleted row: R9:C5:N9
+Pass: 31
+   Least number of 1s in all columns: 1
+   Selected column: R9:N1  
+   Selected rows: [R9:C8:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C8:N1 from [R9:C8:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N1  
+   Deleted column: C8:N1  
+   Deleted column: H9:N1  
+   Deleted column: U:R8:C9
+   Deleted row: R7:C7:N1
+   Deleted row: R4:C8:N1
+   Deleted row: R7:C8:N1
+   Deleted row: R9:C8:N1
+   Deleted row: R9:C8:N4
+   Deleted row: R9:C8:N7
+   Deleted row: R9:C8:N8
+Pass: 32
+   Least number of 1s in all columns: 1
+   Selected column: R9:N2  
+   Selected rows: [R9:C4:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C4:N2 from [R9:C4:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N2  
+   Deleted column: C4:N2  
+   Deleted column: H8:N2  
+   Deleted column: U:R4:C9
+   Deleted row: R3:C4:N2
+   Deleted row: R4:C4:N2
+   Deleted row: R5:C4:N2
+   Deleted row: R9:C4:N2
+Pass: 33
+   Least number of 1s in all columns: 1
+   Selected column: R9:N4  
+   Selected rows: [R9:C2:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C2:N4 from [R9:C2:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N4  
+   Deleted column: C2:N4  
+   Deleted column: H7:N4  
+   Deleted column: U:R2:C9
+   Deleted row: R7:C2:N4
+   Deleted row: R8:C2:N4
+   Deleted row: R9:C2:N4
+Pass: 34
+   Least number of 1s in all columns: 1
+   Selected column: R9:N7  
+   Selected rows: [R9:C6:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C6:N7 from [R9:C6:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N7  
+   Deleted column: C6:N7  
+   Deleted column: H8:N7  
+   Deleted column: U:R6:C9
+   Deleted row: R7:C5:N7
+   Deleted row: R8:C5:N7
+   Deleted row: R4:C6:N7
+   Deleted row: R5:C6:N7
+   Deleted row: R9:C6:N7
+Pass: 35
+   Least number of 1s in all columns: 1
+   Selected column: R9:N8  
+   Selected rows: [R9:C7:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C7:N8 from [R9:C7:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N8  
+   Deleted column: C7:N8  
+   Deleted column: H9:N8  
+   Deleted column: U:R7:C9
+   Deleted row: R4:C7:N8
+   Deleted row: R5:C7:N8
+   Deleted row: R7:C7:N8
+   Deleted row: R9:C7:N8
+   Deleted row: R7:C8:N8
+Pass: 36
+   Least number of 1s in all columns: 1
+   Selected column: R9:N9  
+   Selected rows: [R9:C3:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R9:C3:N9 from [R9:C3:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R9:N9  
+   Deleted column: C3:N9  
+   Deleted column: H7:N9  
+   Deleted column: U:R3:C9
+   Deleted row: R8:C3:N9
+   Deleted row: R9:C3:N9
+Pass: 37
+   Least number of 1s in all columns: 1
+   Selected column: C7:N6  
+   Selected rows: [R7:C7:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C7:N6 from [R7:C7:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N6  
+   Deleted column: C7:N6  
+   Deleted column: H9:N6  
+   Deleted column: U:R7:C7
+   Deleted row: R7:C2:N6
+   Deleted row: R7:C7:N5
+   Deleted row: R7:C7:N6
+   Deleted row: R7:C7:N7
+Pass: 38
+   Least number of 1s in all columns: 1
+   Selected column: H9:N5  
+   Selected rows: [R7:C8:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C8:N5 from [R7:C8:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N5  
+   Deleted column: C8:N5  
+   Deleted column: H9:N5  
+   Deleted column: U:R8:C7
+   Deleted row: R7:C4:N5
+   Deleted row: R7:C5:N5
+   Deleted row: R4:C8:N5
+   Deleted row: R7:C8:N4
+   Deleted row: R7:C8:N5
+   Deleted row: R7:C8:N7
+Pass: 39
+   Least number of 1s in all columns: 1
+   Selected column: C8:N4  
+   Selected rows: [R8:C8:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C8:N4 from [R8:C8:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N4  
+   Deleted column: C8:N4  
+   Deleted column: H9:N4  
+   Deleted column: U:R8:C8
+   Deleted row: R8:C4:N4
+   Deleted row: R8:C5:N4
+   Deleted row: R8:C8:N4
+Pass: 40
+   Least number of 1s in all columns: 1
+   Selected column: C8:N7  
+   Selected rows: [R2:C8:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C8:N7 from [R2:C8:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N7  
+   Deleted column: C8:N7  
+   Deleted column: H3:N7  
+   Deleted column: U:R8:C2
+   Deleted row: R2:C7:N7
+   Deleted row: R2:C8:N3
+   Deleted row: R2:C8:N7
+   Deleted row: R2:C8:N9
+Pass: 41
+   Least number of 1s in all columns: 1
+   Selected column: C7:N7  
+   Selected rows: [R8:C7:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C7:N7 from [R8:C7:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N7  
+   Deleted column: C7:N7  
+   Deleted column: H9:N7  
+   Deleted column: U:R7:C8
+   Deleted row: R8:C2:N7
+   Deleted row: R8:C3:N7
+   Deleted row: R8:C7:N7
+Pass: 42
+   Least number of 1s in all columns: 1
+   Selected column: C8:N3  
+   Selected rows: [R5:C8:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C8:N3 from [R5:C8:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N3  
+   Deleted column: C8:N3  
+   Deleted column: H6:N3  
+   Deleted column: U:R8:C5
+   Deleted row: R5:C4:N3
+   Deleted row: R5:C6:N3
+   Deleted row: R5:C7:N3
+   Deleted row: R5:C8:N3
+Pass: 43
+   Least number of 1s in all columns: 1
+   Selected column: C8:N9  
+   Selected rows: [R4:C8:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C8:N9 from [R4:C8:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N9  
+   Deleted column: C8:N9  
+   Deleted column: H6:N9  
+   Deleted column: U:R8:C4
+   Deleted row: R4:C4:N9
+   Deleted row: R4:C5:N9
+   Deleted row: R4:C6:N9
+   Deleted row: R4:C7:N9
+   Deleted row: R4:C8:N8
+   Deleted row: R4:C8:N9
+Pass: 44
+   Least number of 1s in all columns: 1
+   Selected column: C7:N9  
+   Selected rows: [R2:C7:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C7:N9 from [R2:C7:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N9  
+   Deleted column: C7:N9  
+   Deleted column: H3:N9  
+   Deleted column: U:R7:C2
+   Deleted row: R2:C6:N9
+   Deleted row: R2:C7:N3
+   Deleted row: R2:C7:N9
+Pass: 45
+   Least number of 1s in all columns: 1
+   Selected column: R2:N3  
+   Selected rows: [R2:C6:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C6:N3 from [R2:C6:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N3  
+   Deleted column: C6:N3  
+   Deleted column: H2:N3  
+   Deleted column: U:R6:C2
+   Deleted row: R3:C4:N3
+   Deleted row: R3:C5:N3
+   Deleted row: R2:C6:N3
+   Deleted row: R2:C6:N5
+   Deleted row: R3:C6:N3
+   Deleted row: R6:C6:N3
+Pass: 46
+   Least number of 1s in all columns: 1
+   Selected column: R2:N5  
+   Selected rows: [R2:C5:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R2:C5:N5 from [R2:C5:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R2:N5  
+   Deleted column: C5:N5  
+   Deleted column: H2:N5  
+   Deleted column: U:R5:C2
+   Deleted row: R2:C5:N5
+   Deleted row: R4:C5:N5
+   Deleted row: R8:C5:N5
+Pass: 47
+   Least number of 1s in all columns: 1
+   Selected column: R3:N3  
+   Selected rows: [R3:C7:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C7:N3 from [R3:C7:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N3  
+   Deleted column: C7:N3  
+   Deleted column: H3:N3  
+   Deleted column: U:R7:C3
+   Deleted row: R3:C7:N3
+Pass: 48
+   Least number of 1s in all columns: 1
+   Selected column: R6:N3  
+   Selected rows: [R6:C4:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C4:N3 from [R6:C4:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N3  
+   Deleted column: C4:N3  
+   Deleted column: H5:N3  
+   Deleted column: U:R4:C6
+   Deleted row: R6:C4:N3
+   Deleted row: R7:C4:N3
+   Deleted row: R8:C4:N3
+Pass: 49
+   Least number of 1s in all columns: 1
+   Selected column: R8:N5  
+   Selected rows: [R8:C4:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C4:N5 from [R8:C4:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N5  
+   Deleted column: C4:N5  
+   Deleted column: H8:N5  
+   Deleted column: U:R4:C8
+   Deleted row: R4:C4:N5
+   Deleted row: R5:C4:N5
+   Deleted row: R8:C4:N5
+   Deleted row: R8:C4:N8
+   Deleted row: R8:C4:N9
+Pass: 50
+   Least number of 1s in all columns: 1
+   Selected column: C4:N9  
+   Selected rows: [R3:C4:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C4:N9 from [R3:C4:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N9  
+   Deleted column: C4:N9  
+   Deleted column: H2:N9  
+   Deleted column: U:R4:C3
+   Deleted row: R3:C4:N4
+   Deleted row: R3:C4:N9
+   Deleted row: R3:C5:N9
+   Deleted row: R3:C6:N9
+Pass: 51
+   Least number of 1s in all columns: 1
+   Selected column: C8:N8  
+   Selected rows: [R6:C8:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C8:N8 from [R6:C8:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N8  
+   Deleted column: C8:N8  
+   Deleted column: H6:N8  
+   Deleted column: U:R8:C6
+   Deleted row: R6:C2:N8
+   Deleted row: R6:C6:N8
+   Deleted row: R6:C8:N8
+Pass: 52
+   Least number of 1s in all columns: 1
+   Selected column: U:R2:C4
+   Selected rows: [R4:C2:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C2:N7 from [R4:C2:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N7  
+   Deleted column: C2:N7  
+   Deleted column: H4:N7  
+   Deleted column: U:R2:C4
+   Deleted row: R4:C2:N7
+   Deleted row: R5:C2:N7
+   Deleted row: R7:C2:N7
+   Deleted row: R4:C3:N7
+   Deleted row: R5:C3:N7
+   Deleted row: R4:C5:N7
+Pass: 53
+   Least number of 1s in all columns: 1
+   Selected column: R5:N7  
+   Selected rows: [R5:C5:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C5:N7 from [R5:C5:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N7  
+   Deleted column: C5:N7  
+   Deleted column: H5:N7  
+   Deleted column: U:R5:C5
+   Deleted row: R5:C5:N7
+Pass: 54
+   Least number of 1s in all columns: 1
+   Selected column: R7:N7  
+   Selected rows: [R7:C3:N7] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C3:N7 from [R7:C3:N7] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N7  
+   Deleted column: C3:N7  
+   Deleted column: H7:N7  
+   Deleted column: U:R3:C7
+   Deleted row: R7:C3:N7
+Pass: 55
+   Least number of 1s in all columns: 1
+   Selected column: U:R3:C6
+   Selected rows: [R6:C3:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C3:N2 from [R6:C3:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N2  
+   Deleted column: C3:N2  
+   Deleted column: H4:N2  
+   Deleted column: U:R3:C6
+   Deleted row: R4:C3:N2
+   Deleted row: R5:C3:N2
+   Deleted row: R6:C3:N2
+   Deleted row: R6:C6:N2
+Pass: 56
+   Least number of 1s in all columns: 1
+   Selected column: U:R5:C6
+   Selected rows: [R6:C5:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C5:N9 from [R6:C5:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N9  
+   Deleted column: C5:N9  
+   Deleted column: H5:N9  
+   Deleted column: U:R5:C6
+   Deleted row: R6:C5:N9
+   Deleted row: R8:C5:N9
+   Deleted row: R6:C6:N9
+Pass: 57
+   Least number of 1s in all columns: 1
+   Selected column: R8:N9  
+   Selected rows: [R8:C6:N9] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C6:N9 from [R8:C6:N9] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N9  
+   Deleted column: C6:N9  
+   Deleted column: H8:N9  
+   Deleted column: U:R6:C8
+   Deleted row: R8:C6:N9
+Pass: 58
+   Least number of 1s in all columns: 1
+   Selected column: U:R7:C6
+   Selected rows: [R6:C7:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C7:N1 from [R6:C7:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N1  
+   Deleted column: C7:N1  
+   Deleted column: H6:N1  
+   Deleted column: U:R7:C6
+   Deleted row: R6:C6:N1
+   Deleted row: R4:C7:N1
+   Deleted row: R5:C7:N1
+   Deleted row: R6:C7:N1
+Pass: 59
+   Least number of 1s in all columns: 1
+   Selected column: U:R6:C7
+   Selected rows: [R7:C6:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C6:N4 from [R7:C6:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N4  
+   Deleted column: C6:N4  
+   Deleted column: H8:N4  
+   Deleted column: U:R6:C7
+   Deleted row: R7:C4:N4
+   Deleted row: R7:C5:N4
+   Deleted row: R3:C6:N4
+   Deleted row: R5:C6:N4
+   Deleted row: R7:C6:N4
+Pass: 60
+   Least number of 1s in all columns: 1
+   Selected column: R3:N4  
+   Selected rows: [R3:C5:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C5:N4 from [R3:C5:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N4  
+   Deleted column: C5:N4  
+   Deleted column: H2:N4  
+   Deleted column: U:R5:C3
+   Deleted row: R3:C5:N2
+   Deleted row: R3:C5:N4
+Pass: 61
+   Least number of 1s in all columns: 1
+   Selected column: R3:N2  
+   Selected rows: [R3:C6:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R3:C6:N2 from [R3:C6:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R3:N2  
+   Deleted column: C6:N2  
+   Deleted column: H2:N2  
+   Deleted column: U:R6:C3
+   Deleted row: R3:C6:N2
+   Deleted row: R4:C6:N2
+   Deleted row: R5:C6:N2
+Pass: 62
+   Least number of 1s in all columns: 1
+   Selected column: R5:N2  
+   Selected rows: [R5:C7:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C7:N2 from [R5:C7:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N2  
+   Deleted column: C7:N2  
+   Deleted column: H6:N2  
+   Deleted column: U:R7:C5
+   Deleted row: R4:C7:N2
+   Deleted row: R5:C7:N2
+   Deleted row: R5:C7:N5
+Pass: 63
+   Least number of 1s in all columns: 1
+   Selected column: R4:N2  
+   Selected rows: [R4:C5:N2] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C5:N2 from [R4:C5:N2] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N2  
+   Deleted column: C5:N2  
+   Deleted column: H5:N2  
+   Deleted column: U:R5:C4
+   Deleted row: R4:C5:N1
+   Deleted row: R4:C5:N2
+   Deleted row: R4:C5:N8
+Pass: 64
+   Least number of 1s in all columns: 1
+   Selected column: R5:N4  
+   Selected rows: [R5:C4:N4] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C4:N4 from [R5:C4:N4] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N4  
+   Deleted column: C4:N4  
+   Deleted column: H5:N4  
+   Deleted column: U:R4:C5
+   Deleted row: R5:C4:N1
+   Deleted row: R5:C4:N4
+   Deleted row: R5:C4:N8
+Pass: 65
+   Least number of 1s in all columns: 1
+   Selected column: C7:N5  
+   Selected rows: [R4:C7:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C7:N5 from [R4:C7:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N5  
+   Deleted column: C7:N5  
+   Deleted column: H6:N5  
+   Deleted column: U:R7:C4
+   Deleted row: R4:C6:N5
+   Deleted row: R4:C7:N5
+Pass: 66
+   Least number of 1s in all columns: 2
+   Selected column: R1:N1  
+   Selected rows: [R1:C5:N1,R1:C6:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C5:N1 from [R1:C5:N1,R1:C6:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N1  
+   Deleted column: C5:N1  
+   Deleted column: H2:N1  
+   Deleted column: U:R5:C1
+   Deleted row: R1:C5:N1
+   Deleted row: R1:C5:N8
+   Deleted row: R7:C5:N1
+   Deleted row: R1:C6:N1
+Pass: 67
+   Least number of 1s in all columns: 1
+   Selected column: R1:N8  
+   Selected rows: [R1:C6:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R1:C6:N8 from [R1:C6:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R1:N8  
+   Deleted column: C6:N8  
+   Deleted column: H2:N8  
+   Deleted column: U:R6:C1
+   Deleted row: R1:C6:N8
+   Deleted row: R4:C6:N8
+   Deleted row: R5:C6:N8
+Pass: 68
+   Least number of 1s in all columns: 1
+   Selected column: R7:N1  
+   Selected rows: [R7:C4:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C4:N1 from [R7:C4:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N1  
+   Deleted column: C4:N1  
+   Deleted column: H8:N1  
+   Deleted column: U:R4:C7
+   Deleted row: R4:C4:N1
+   Deleted row: R7:C4:N1
+   Deleted row: R7:C4:N8
+Pass: 69
+   Least number of 1s in all columns: 1
+   Selected column: C4:N8  
+   Selected rows: [R4:C4:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C4:N8 from [R4:C4:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N8  
+   Deleted column: C4:N8  
+   Deleted column: H5:N8  
+   Deleted column: U:R4:C4
+   Deleted row: R4:C3:N8
+   Deleted row: R4:C4:N8
+Pass: 70
+   Least number of 1s in all columns: 2
+   Selected column: R4:N1  
+   Selected rows: [R4:C3:N1,R4:C6:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C3:N1 from [R4:C3:N1,R4:C6:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N1  
+   Deleted column: C3:N1  
+   Deleted column: H4:N1  
+   Deleted column: U:R3:C4
+   Deleted row: R4:C3:N1
+   Deleted row: R4:C3:N6
+   Deleted row: R5:C3:N1
+   Deleted row: R4:C6:N1
+Pass: 71
+   Least number of 1s in all columns: 1
+   Selected column: R4:N6  
+   Selected rows: [R4:C6:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R4:C6:N6 from [R4:C6:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R4:N6  
+   Deleted column: C6:N6  
+   Deleted column: H5:N6  
+   Deleted column: U:R6:C4
+   Deleted row: R4:C6:N6
+   Deleted row: R6:C6:N6
+Pass: 72
+   Least number of 1s in all columns: 1
+   Selected column: R5:N1  
+   Selected rows: [R5:C6:N1] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C6:N1 from [R5:C6:N1] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N1  
+   Deleted column: C6:N1  
+   Deleted column: H5:N1  
+   Deleted column: U:R6:C5
+   Deleted row: R5:C6:N1
+   Deleted row: R5:C6:N5
+Pass: 73
+   Least number of 1s in all columns: 1
+   Selected column: R5:N5  
+   Selected rows: [R5:C2:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C2:N5 from [R5:C2:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N5  
+   Deleted column: C2:N5  
+   Deleted column: H4:N5  
+   Deleted column: U:R2:C5
+   Deleted row: R5:C2:N5
+   Deleted row: R5:C2:N8
+   Deleted row: R6:C2:N5
+Pass: 74
+   Least number of 1s in all columns: 1
+   Selected column: R5:N8  
+   Selected rows: [R5:C3:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R5:C3:N8 from [R5:C3:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R5:N8  
+   Deleted column: C3:N8  
+   Deleted column: H4:N8  
+   Deleted column: U:R3:C5
+   Deleted row: R5:C3:N8
+   Deleted row: R8:C3:N8
+Pass: 75
+   Least number of 1s in all columns: 1
+   Selected column: R6:N5  
+   Selected rows: [R6:C6:N5] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C6:N5 from [R6:C6:N5] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N5  
+   Deleted column: C6:N5  
+   Deleted column: H5:N5  
+   Deleted column: U:R6:C6
+   Deleted row: R6:C6:N5
+Pass: 76
+   Least number of 1s in all columns: 1
+   Selected column: R6:N6  
+   Selected rows: [R6:C2:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R6:C2:N6 from [R6:C2:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R6:N6  
+   Deleted column: C2:N6  
+   Deleted column: H4:N6  
+   Deleted column: U:R2:C6
+   Deleted row: R6:C2:N6
+   Deleted row: R8:C2:N6
+Pass: 77
+   Least number of 1s in all columns: 1
+   Selected column: R8:N6  
+   Selected rows: [R8:C3:N6] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C3:N6 from [R8:C3:N6] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N6  
+   Deleted column: C3:N6  
+   Deleted column: H7:N6  
+   Deleted column: U:R3:C8
+   Deleted row: R8:C3:N6
+Pass: 78
+   Least number of 1s in all columns: 2
+   Selected column: R7:N3  
+   Selected rows: [R7:C2:N3,R7:C5:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C2:N3 from [R7:C2:N3,R7:C5:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N3  
+   Deleted column: C2:N3  
+   Deleted column: H7:N3  
+   Deleted column: U:R2:C7
+   Deleted row: R7:C2:N3
+   Deleted row: R7:C2:N8
+   Deleted row: R8:C2:N3
+   Deleted row: R7:C5:N3
+Pass: 79
+   Least number of 1s in all columns: 1
+   Selected column: R7:N8  
+   Selected rows: [R7:C5:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R7:C5:N8 from [R7:C5:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R7:N8  
+   Deleted column: C5:N8  
+   Deleted column: H8:N8  
+   Deleted column: U:R5:C7
+   Deleted row: R7:C5:N8
+   Deleted row: R8:C5:N8
+Pass: 80
+   Least number of 1s in all columns: 1
+   Selected column: R8:N3  
+   Selected rows: [R8:C5:N3] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C5:N3 from [R8:C5:N3] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N3  
+   Deleted column: C5:N3  
+   Deleted column: H8:N3  
+   Deleted column: U:R5:C8
+   Deleted row: R8:C5:N3
+Pass: 81
+   Least number of 1s in all columns: 1
+   Selected column: R8:N8  
+   Selected rows: [R8:C2:N8] (Intersection of these rows and the chosen column is a 1)
+       ---
+   Row R8:C2:N8 from [R8:C2:N8] (Added to Partial Solution from Incidence Matrix)
+
+   Deleted column: R8:N8  
+   Deleted column: C2:N8  
+   Deleted column: H7:N8  
+   Deleted column: U:R2:C8
+   Deleted row: R8:C2:N8
+Pass: 82
+   Successful Termination
+         Sudoku Board:
+         [6,9,3,7,1,8,4,2,5]
+         [8,2,4,6,5,3,9,7,1]
+         [7,1,5,9,4,2,3,6,8]
+         [3,7,1,8,2,6,5,9,4]
+         [9,5,8,4,7,1,2,3,6]
+         [4,6,2,3,9,5,1,8,7]
+         [2,3,7,1,8,4,6,5,9]
+         [1,8,6,5,3,9,7,4,2]
+         [5,4,9,2,6,7,8,1,3]
