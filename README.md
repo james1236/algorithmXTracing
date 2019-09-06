@@ -6,7 +6,7 @@ A JavaScript implementation of Donald Knuth's Algorithm X that traces the proces
 <br>
 
 ### What is algorithm X?
-Algorithm X is a general purpose backtracking algorithm devised by Donald Knuth in his paper on Dancing Links - a method for efficiently implementing backtracking algorithms - as a tool to describe his dancing links method. Algorithm X solves NP decision problems; nondeterministic desicion problems solveable in polynomial time.
+Algorithm X is a general purpose backtracking algorithm devised by Donald Knuth in his paper on Dancing Links - a method for efficiently implementing backtracking algorithms - as a use case for his dancing links method. Algorithm X solves NP decision problems; nondeterministic desicion problems solveable in polynomial time.
 https://arxiv.org/pdf/cs/0011047
 
 <br>
@@ -27,7 +27,7 @@ Example unsolved Sudoku (0 represents an empty cell):
 
 `sudoku = [[0, 3, 0, 0], [0, 0, 1, 0], [2, 0, 0, 0], [0, 0, 4, 0]];`
 
-Convert your Sudoku to a two dimensional array as described above. Replace line 22 of the html file with your array. 
+Convert your Sudoku to a two dimensional array as described above. Replace line 22 of the HTML file with your array. 
 
 <br>
 
@@ -40,5 +40,5 @@ Replace both X's on line 24 shown below with the number of "boxes" (alternativel
 
 
 #### 3.
-Save your html file and double click it to run
+Save your HTML file and double click it to run
 
